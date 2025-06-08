@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: worker-deployment
+spec:
+  replicas: 5              # two Pods total
+  selector:
+    matchLabels:
+      app: worker
+  template:
+    metadata:
+      labels:
+        app: worker
+    spec:
+      containers:
+      - name: worker
+        image: maxrerisi/my-worker:1.0.0   # or "my-worker:latest" if loaded locally
+        imagePullPolicy: IfNotPresent
+        # (optional) env:
+        # - name: APP_URL
+        #   value: "http://flask-service:1234/data"
