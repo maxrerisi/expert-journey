@@ -1,5 +1,5 @@
 import requests
-import os
+import os, time
 
 
 def send_post_request(url, data):
@@ -21,4 +21,9 @@ if __name__ == "__main__":
     # response = send_post_request(app_url, payload)
     # print(f"Response: {response}")
     os.system("git clone https://github.com/maxrerisi/expert-journey")
-    os.system("")
+    t = time.time()
+    os.system("cd expert-journey")
+    os.system(f"touch data/{t}")
+    os.system(f"git add .")
+    os.system('git commit -m "committing"')
+    os.system("git push")
