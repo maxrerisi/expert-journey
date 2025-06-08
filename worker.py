@@ -20,4 +20,5 @@ if __name__ == "__main__":
     # payload = {"value": str(socket.gethostname())}
     # response = send_post_request(app_url, payload)
     # print(f"Response: {response}")
-    os.system()
+    os.system("git clone https://github.com/maxrerisi/expert-journey")
+    os.system("")
