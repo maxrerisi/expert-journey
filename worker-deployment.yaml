@@ -54,4 +54,5 @@ spec:
     port: 80
     targetPort: 5000
   type: LoadBalancer
-  
+  externalIPs:
+  - 192.168.64.8
